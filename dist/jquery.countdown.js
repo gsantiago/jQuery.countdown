@@ -1,6 +1,6 @@
 /*!
  * The Final Countdown for jQuery v2.2.0 (http://hilios.github.io/jQuery.countdown/)
- * Copyright (c) 2016 Edson Hilios
+ * Copyright (c) 2017 Edson Hilios
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -23,6 +23,8 @@
     "use strict";
     if (typeof define === "function" && define.amd) {
         define([ "jquery" ], factory);
+    } else if (typeof module === "object" && module.exports) {
+        factory(require("jquery"));
     } else {
         factory(jQuery);
     }
